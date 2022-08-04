@@ -1,0 +1,51 @@
+/* Временные стили для визуального удобства разметки*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header,
+main,
+footer {
+    padding: 1em;
+    margin: 1em 0;
+    border: 3px solid rgb(201, 177, 177);
+}
+
+nav,
+section {
+    padding: 1em;
+    margin: 1em 0;
+    border: 3px dotted rgb(180, 180, 255);
+}
+
+div {
+    padding: 1em;
+    margin: 1em 0;
+    border: 1px solid grey;
+}
+
+body {
+    padding: 12px;
+}
+
+/* Основные стили */
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("fonts/Montserrat-Regular.ttf");
+}
+
+
+body {
+    font-family: "Montserrat Regular", "Roboto", "Arial", sans-serif;
+}
+
+.header-nav {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+}
