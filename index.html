@@ -11,47 +11,49 @@
 <body>
     <!-- ЗАГОЛОВОК -->
     <header>
+
         <div>
-            <div>
-                <img src="logos/scandy_logo.png" alt="Логотип SCANDI">
-                <span>SCANDI</span>
-                <nav>
-                    <ul class="header-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">О компании</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Портфолию</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Команда</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Как мы работаем</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Отзывы клиентов</a>
-                        </li>
-                        <li class="nav-link">
-                            <a class="nav-link" href="#">Оставить заявку</a>
-                        </li>
-                    </ul>
-                </nav>
-                <span>+7&nbsp;(981)&nbsp;857-46-24</span>
-            </div>
+            <img src="logos/scandy_logo.png" alt="Логотип SCANDI">
+            <span>SCANDI</span>
+            <nav>
+                <ul class="header-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Портфолию</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Команда</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Как мы работаем</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Отзывы клиентов</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav-link" href="#">Оставить заявку</a>
+                    </li>
+                </ul>
+            </nav>
+            <span>+7&nbsp;(981)&nbsp;857-46-24</span>
+        </div>
+        <div>
             <h1 class="header-title">Поможем сделать вашу квартиру уютнее</h1>
             <p>Подбираем текстиль, мебель и аксессуары под ваш интерьер, находим магазины и помогаем организовать
                 доставку
             </p>
             <button>Оставить заявку</button>
         </div>
+
     </header>
 
     <!-- ОСНОВНАЯ ЧАСТЬ -->
     <main>
         <section>
             <h2>О нас</h2>
-            <img alt="Фото сервировки стола">
+            <img src="" alt="Фото сервировки стола">
 
             <div>
                 <p>Премиальный европейский текстиль — одно из самых главных направлений работы коллектива. Создавать
@@ -61,9 +63,11 @@
                     именно то, что действительно достойно моего дома!»</p>
             </div>
             <div>
-                <p>5 лет опыта</p>
-                <p>100 проектов</p>
-                <p>10 наград</p>
+                <ul>
+                    <li>5 лет опыта</li>
+                    <li>100 проектов</li>
+                    <li>10 наград</li>
+                </ul>
             </div>
         </section>
 
@@ -74,6 +78,11 @@
             <img src="" alt="Интерьер аппартаментов">
             <img src="" alt="Интерьер аппартаментов">
 
+            <!-- 
+                :hover
+                <h3>Квартира-студия 30 кв.м.</h3>
+                <p>В квартире были светлые стены и тёплые цвета. Мы сконцентрировались на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</p>
+            -->
             <button>Смотреть ещё</button>
         </section>
         <section>
@@ -122,13 +131,29 @@
         </section>
 
         <section>
-            <h2>Оставить заявку</h2>
-        </section>
+            <div>
+                <h2>Оставить заявку</h2>
+                <p>Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.</p>
+                <form>
+                    <input type="text" name="name" value="Ваше имя">
+                    <input type="tel" name="tel" value="Введите телефон">
+                    <input type="submit" value="Оставить заявку">
+                </form>
+            </div>
+            <div>
+                <img src="" alt="Google Map screenshot">
+            </div>
 
+        </section>
     </main>
 
     <!-- ФУТЕР -->
     <footer>
+        <div>
+            <span>+7 (981) 857-46-24</span>
+            <span>г. Санкт-Петербург, ул. Большая Конюшенная, 19</span>
+            <span>ИП Королёва А.А.</span>
+        </div>
 
     </footer>
 
