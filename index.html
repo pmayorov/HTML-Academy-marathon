@@ -13,27 +13,27 @@
     <header>
 
         <div>
-            <img src="logos/scandy_logo.png" alt="Логотип студии.">
+            <img width="25" height="25" src="images/scandy-logo.png" alt="Логотип студии.">
             <span>SCANDI</span>
             <nav>
                 <ul class="header-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">О компании</a>
+                        <a class="nav-link" href="#id-about">О компании</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Портфолию</a>
+                        <a class="nav-link" href="#id-portfolio">Портфолию</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Команда</a>
+                        <a class="nav-link" href="#id-team"">Команда</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Как мы работаем</a>
+                        <a class="nav-link" href="#id-workflow">Как мы работаем</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Отзывы клиентов</a>
+                        <a class="nav-link" href="#id-reviews">Отзывы клиентов</a>
                     </li>
                     <li class="nav-link">
-                        <a class="nav-link" href="#">Оставить заявку</a>
+                        <a href="#id-order" class="nav-link" href="#">Оставить заявку</a>
                     </li>
                 </ul>
             </nav>
@@ -44,7 +44,7 @@
             <p>Подбираем текстиль, мебель и аксессуары под ваш интерьер, находим магазины и помогаем организовать
                 доставку
             </p>
-            <button>Оставить заявку</button>
+            <a href="#id-order">Оставить заявку</a>
         </div>
 
     </header>
@@ -52,8 +52,8 @@
     <!-- ОСНОВНАЯ ЧАСТЬ -->
     <main>
         <section>
-            <h2>О нас</h2>
-            <img src="" alt="Фото сервировки стола.">
+            <h2 id="id-about">О нас</h2>
+            <img src="images/content/about-us.jpg" width="445" height="465" alt="Фото сервировки стола.">
 
             <div>
                 <p>Премиальный европейский текстиль — одно из самых главных направлений работы коллектива. Создавать
@@ -72,36 +72,38 @@
         </section>
 
         <section>
-            <h2>Наши работы</h2>
-            <img src="" alt="Интерьер аппартаментов.">
-            <img src="" alt="Интерьер аппартаментов.">
-            <img src="" alt="Интерьер аппартаментов.">
-            <img src="" alt="Интерьер аппартаментов.">
+            <h2 id="id-portfolio">Наши работы</h2>
+            <img src="images/content/apartment-01.jpg" width="488" height="451" alt="Интерьер спальни.">
+            <img src="images/content/apartment-02.jpg" width="692" height="451" alt="Интерьер столовой.">
+            <img src="images/content/apartment-03.jpg" width="692" height="451" alt="Интерьер зала.">
+            <img src="images/content/apartment-04.jpg" width="488" height="451" alt="Интерьер ванной комнаты.">
 
             <!-- 
                 :hover
                 <h3>Квартира-студия 30 кв.м.</h3>
                 <p>В квартире были светлые стены и тёплые цвета. Мы сконцентрировались на отсылках к природе и сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</p>
             -->
+
             <button>Смотреть ещё</button>
         </section>
 
         <section>
-            <h2>Команда</h2>
+            <h2 id="id-team">Команда</h2>
             <dl>
-                <dt><img src="" alt="Фото главного дизайнера."></dt>
+                <dt><img src="images/content/member-01.jpg" width="320" height="253" alt="Фото главного дизайнера.">
+                </dt>
                 <dd>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам домой, общается и
                     помогает сделать вашу квартиру красивой и уютной.</dd>
 
-                <dt><img src="" alt="Фото менеджера."></dt>
+                <dt><img src="images/content/member-02.jpg" width="320" height="253" alt="Фото менеджера."></dt>
                 <dd>С нашим менеджером Сашей вы познакомитесь в первую очередь. Она проконсультирует вас, соберёт все
                     документы и ответит на все вопросы.</dd>
 
-                <dt><img src="" alt="Фото дизайнера."></dt>
+                <dt><img src="images/content/member-03.jpg" width="320" height="253" alt="Фото дизайнера."></dt>
                 <dd>Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами и точно знает, как
                     обустроить дом так, чтобы вам понравилось.</dd>
             </dl>
-            <h2>Как мы работаем</h2>
+            <h2 id="id-workflow">Как мы работаем</h2>
             <dl>
                 <dt>1</dt>
                 <dd>Знакомимся, выезжаем на объект, утверждаем концепцию, подписываем договор.</dd>
@@ -115,7 +117,7 @@
         </section>
 
         <section>
-            <h2>Отзывы</h2>
+            <h2 id="id-reviews">Отзывы</h2>
             <button>arrow Left</button>
             <div>
                 <blockquote>«Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения
@@ -125,8 +127,8 @@
                 <cite>Анна Беловская</cite>
             </div>
             <div>
-                <img src="" alt="Фото прихожей.">
-                <img src="" alt="Фото столовой.">
+                <img src="images/content/reviews-01.jpg" width="407" height="272" alt="Фото прихожей в отзывах.">
+                <img src="images/content/reviews-02.jpg" width="407" height="272" alt="Фото столовой в отзывах.">
             </div>
             <button>arrow Right</button>
         </section>
@@ -135,14 +137,14 @@
             <div>
                 <h2>Оставить заявку</h2>
                 <p>Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.</p>
-                <form>
+                <form id="id-order">
                     <input type="text" name="name" value="Ваше имя">
                     <input type="tel" name="tel" value="Введите телефон">
                     <input type="submit" value="Оставить заявку">
                 </form>
             </div>
             <div>
-                <img src="" alt="Google Map screenshot">
+                <img src="images/content/map-screenhot.png" width="590" height="624" alt="Google Map screenshot">
             </div>
 
         </section>

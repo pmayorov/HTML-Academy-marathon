@@ -224,6 +224,8 @@ li a::before {
 
 img {
     display: inline-block;
+    width: auto;
+    height: 200px;
     padding: 20px;
     background-color: #F0F8FF;
     border: 1px solid #708090;
