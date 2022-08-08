@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     color: #000000;
+    text-decoration: none;
 }
 
 *::before {
@@ -172,12 +173,8 @@ dd {
     list-style-type: none;
     position: relative;
     margin-bottom: 5px;
-    padding: 5px 12px 5px 50px;
+    padding: 5px 12px 5px 45px;
     border: 1px solid #CD853F;
-}
-
-li a {
-    padding-left: 40px;
 }
 
 dd:not(:last-child) {
@@ -213,19 +210,10 @@ dd::before {
     content: "dd";
 }
 
-li a::before {
-    display: inline-block;
-    background-color: #A52A2A;
-    color: #FFFFFF;
-    content: "link";
-    top: 5px;
-    left: 40px;
-}
-
 img {
     display: inline-block;
     width: auto;
-    height: 200px;
+    max-height: 200px;
     padding: 20px;
     background-color: #F0F8FF;
     border: 1px solid #708090;
@@ -239,12 +227,29 @@ span {
     border: 1px solid #708090;
 }
 
+a {
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px 5px 55px;
+    background-color: #F5F5F5;
+    border: 1px solid #5fa5eb;
+}
+
+
 span::before {
     background-color: #708090;
     color: #FFFFFF;
     content: "span";
     top: 4px;
-    left: 10px;
+    left: 5px;
+}
+
+a::before {
+    background-color: #5fa5eb;
+    color: #FFFFFF;
+    content: "link";
+    top: 4px;
+    left: 5px;
 }
 
 button,
