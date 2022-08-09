@@ -1,19 +1,93 @@
+/* ОТЛАДОЧНЫЕ */
+
+/* header,
+main,
+footer {
+    border: 1px solid red;
+}
+
+div {
+    border: 1px solid rgb(102, 2, 57);
+    margin: 10px 5px;
+}
+
+nav,
+ul,
+li,
+img {
+    border: 1px solid silver;
+    margin: 10px 5px;
+}
+
+h1,
+p,
+span {
+    border: 1px dashed rgb(59, 116, 182);
+    margin: 10px 5px;
+} */
+
+/* ВРЕМЕННЫЕ. Возможно требуют переназначения */
+
+a {
+    text-decoration: none;
+}
+
+
 /* Основные стили */
 
 @font-face {
     font-family: "Montserrat Regular";
-    src: url("fonts/Montserrat-Regular.ttf");
+    src: url("../fonts/Montserrat-Regular.ttf ");
 }
-
 
 body {
+    margin: 0;
     font-family: "Montserrat Regular", "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #533738;
 }
 
+/* .body-header {
+    width: 100%;
+} */
+
+.body-header {
+    background: url("../images/decor/head-background.jpg") no-repeat;
+    background-size: 100%;
+    padding-bottom: 100%;
+    padding-top: 36px;
+}
+
+.cover-header-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* margin-top: 36px; */
+    max-width: 1200px;
+    align-items: center;
+}
+
+
 .header-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 26px;
 }
 
 .nav-link {
-    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.cover-header-title {
+    margin-top: 152px;
+    margin-left: 184px;
+    width: 534px;
 }
