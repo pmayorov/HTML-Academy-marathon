@@ -4,6 +4,7 @@
 main,
 footer {
     border: 1px solid red;
+    margin: 1rem 0;
 }
 
 div {
@@ -28,17 +29,16 @@ span {
 
 /* ВРЕМЕННЫЕ. Возможно требуют переназначения */
 
-a {
-    text-decoration: none;
-}
 
 
-/* Основные стили */
+/* Основные правила */
 
 @font-face {
     font-family: "Montserrat Regular";
-    src: url("./fonts/Montserrat-Regular.ttf ");
+    src: url("../fonts/Montserrat-Regular.ttf ");
 }
+
+/* В конце работы перепроверить правила. Возможно необходимо переназначить логичнее */
 
 body {
     margin: 0;
@@ -48,33 +48,40 @@ body {
     color: #533738;
 }
 
-/* .body-header {
-    width: 100%;
-} */
+a {
+    text-decoration: none;
+}
 
-.body-header {
-    background: url("./images/decor/head-background.jpg") no-repeat;
-    background-size: 100%;
-    padding-bottom: 100%;
-    padding-top: 36px;
+
+/* ---- */
+
+/* Стили блоков, секций, списков */
+
+.cover-header {
+    /* Если убрать эту прозрачную рамку, то свойствово margin-top: 36px в правиле .cover-header-nav 
+    добавит 36-пиксельную белую полосу сверху */
+    border: 1px solid transparent;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e1d9ce;
+    background: url("../images/decor/head-background.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .cover-header-nav {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    /* margin-top: 36px; */
+    margin-top: 36px;
     max-width: 1200px;
     align-items: center;
 }
-
 
 .header-nav {
     display: flex;
     margin: 0;
     padding: 0;
     list-style-type: none;
-
 }
 
 .nav-item:not(:last-child) {
@@ -86,8 +93,35 @@ body {
     line-height: 20px;
 }
 
-.cover-header-title {
+.cover-intro {
     margin-top: 152px;
     margin-left: 184px;
-    width: 534px;
+    max-width: 534px;
+}
+
+/* Стили заголовков, параграфов, ссылок */
+
+.text-center {
+    text-align: center;
+}
+
+.top-header {
+    font-size: 50px;
+    line-height: 125%;
+}
+
+.body-header {
+    font-size: 40px;
+    line-height: 125%;
+    text-transform: uppercase;
+}
+
+.body-text {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+cite.body-text {
+    font-style: normal;
+    text-transform: uppercase;
 }
