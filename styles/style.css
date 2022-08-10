@@ -4,12 +4,10 @@
 main,
 footer {
     border: 1px solid red;
-    margin: 1rem 0;
 }
 
 div {
     border: 1px solid rgb(102, 2, 57);
-    margin: 10px 5px;
 }
 
 nav,
@@ -17,62 +15,78 @@ ul,
 li,
 img {
     border: 1px solid silver;
-    margin: 10px 5px;
 }
 
 h1,
+h2,
 p,
 span {
     border: 1px dashed rgb(59, 116, 182);
-    margin: 10px 5px;
-} */
-
-/* ВРЕМЕННЫЕ. Возможно требуют переназначения */
+}  */
 
 
 
 /* Основные правила */
 
-@font-face {
-    font-family: "Montserrat Regular";
-    src: url("../fonts/Montserrat-Regular.ttf ");
-}
-
-/* В конце работы перепроверить правила. Возможно необходимо переназначить логичнее */
-
-body {
-    margin: 0;
-    font-family: "Montserrat Regular", "Roboto", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    color: #533738;
-}
+/* Reset */
 
 a {
     text-decoration: none;
 }
 
-
-/* ---- */
-
-/* Стили блоков, секций, списков */
-
-.cover-header {
-    /* Если убрать эту прозрачную рамку, то свойствово margin-top: 36px в правиле .cover-header-nav 
-    добавит 36-пиксельную белую полосу сверху */
-    border: 1px solid transparent;
-    width: 100vw;
-    height: 100vh;
-    background-color: #e1d9ce;
-    background: url("../images/decor/head-background.jpg") no-repeat center;
-    background-size: cover;
+h1,
+h2,
+p,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
 }
 
-.cover-header-nav {
+ul {
+    list-style-type: none;
+}
+
+/* В конце работы перепроверить правила!!! 
+Возможно необходимо переназначить логичнее */
+
+body {
+    width: 1400px;
+    margin: 0;
+    padding: 0;
+    color: #533738;
+    background-color: #EFE6E4;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Заголовочный раздел */
+
+.cover-header {
+
+    /* width: 100vw; */
+    /* height: 100vh; */
+    width: 1400px;
+    height: 715px;
+    background-color: #e1d9ce;
+    background: url("../images/decor/head-background.jpg") no-repeat center;
+    background-size: 100%;
+
+}
+
+.cover-nav {
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    top: 35px;
     margin: 0 auto;
-    margin-top: 36px;
+    justify-content: space-between;
     max-width: 1200px;
     align-items: center;
 }
@@ -81,7 +95,6 @@ a {
     display: flex;
     margin: 0;
     padding: 0;
-    list-style-type: none;
 }
 
 .nav-item:not(:last-child) {
@@ -94,29 +107,31 @@ a {
 }
 
 .cover-intro {
-    margin-top: 152px;
-    margin-left: 184px;
+    position: relative;
+    top: 91px;
+    left: 184px;
+    margin-bottom: 24px;
     max-width: 534px;
 }
 
-/* Стили заголовков, параграфов, ссылок */
-
-.text-center {
-    text-align: center;
-}
-
-.top-header {
+.main-title {
     font-size: 50px;
+    font-weight: 400;
     line-height: 125%;
+    margin-bottom: 24px;
 }
 
-.body-header {
+.section-title {
+    width: 100%;
     font-size: 40px;
+    font-weight: 400;
     line-height: 125%;
     text-transform: uppercase;
+    margin-bottom: 40px;
 }
 
 .body-text {
+    /* margin: 0; */
     font-size: 18px;
     line-height: 30px;
 }
@@ -124,4 +139,74 @@ a {
 cite.body-text {
     font-style: normal;
     text-transform: uppercase;
+}
+
+.href-order {
+    position: relative;
+    display: inline-flex;
+    width: 309px;
+    height: 74px;
+    margin-top: 21px;
+    left: -2px;
+    font-size: 20px;
+    line-height: 125%;
+    font-weight: 500;
+    background-color: #cc8b86;
+    color: #533738;
+    align-items: center;
+    justify-content: center;
+}
+
+/* О НАС */
+
+.cover-main {
+    width: 1400px;
+    padding-top: 65px;
+}
+
+.section-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-about img {
+    margin-left: 182px;
+}
+
+.about-us {
+    width: 528px;
+    margin-right: 182px;
+}
+
+.our-progress {
+    width: 100%;
+    margin-top: 21px;
+    background-color: #8d7370;
+    padding: 85px 182px 81px 182px;
+}
+
+.our-progress ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-progress li {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+}
+
+.our-progress li span {
+    display: block;
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 135%;
+}
+
+.our-progress ul {
+    width: 100%;
 }
