@@ -49,7 +49,7 @@ body {
     /* height: 100vh; */
     height: 715px;
     background-color: #e1d9ce;
-    background: url("/images/decor/head-background.jpg") no-repeat center;
+    background: url("../images/decor/head-background.jpg") no-repeat center;
     background-size: 100%;
 }
 
@@ -221,7 +221,7 @@ cite.body-text {
     display: inline-block;
     width: 62px;
     height: 16px;
-    background: url("/images/decor/arrow-right.svg") no-repeat center;
+    background: url("../images/decor/arrow-right.svg") no-repeat center;
 }
 
 
