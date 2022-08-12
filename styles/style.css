@@ -25,31 +25,7 @@ span {
 }  */
 
 
-
-/* Основные правила */
-
-/* Reset */
-
-a {
-    text-decoration: none;
-}
-
-h1,
-h2,
-p,
-dd,
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style-type: none;
-}
-
-/* В конце работы перепроверить правила!!! 
-Возможно необходимо переназначить логичнее */
+/* ОСНОВНЫЕ ПРАВИЛА */
 
 body {
     width: 1400px;
@@ -66,40 +42,75 @@ body {
     text-align: center;
 }
 
-
 /* HEADER */
 
-.cover-header {
+.body-header {
     /* width: 100vw; */
     /* height: 100vh; */
     height: 715px;
     background-color: #e1d9ce;
-    background: url("../images/decor/head-background.jpg") no-repeat center;
+    background: url("/images/decor/head-background.jpg") no-repeat center;
     background-size: 100%;
 }
 
-.cover-nav {
+.box-nav {
     display: flex;
-    position: relative;
-    top: 35px;
     margin: 0 auto;
+    padding-top: 35px;
     justify-content: space-between;
     max-width: 1200px;
     align-items: center;
 }
 
-.cover-intro {
-    position: relative;
-    top: 91px;
-    left: 184px;
+.nav-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.box-intro {
+    margin-top: 92px;
+    margin-left: 184px;
     margin-bottom: 24px;
     width: 534px;
 }
 
-.header-nav {
-    display: flex;
+.title-main {
     margin: 0;
-    padding: 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 125%;
+    margin-bottom: 24px;
+}
+
+.title-section {
+    margin: 0;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 125%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.body-header a {
+    text-decoration: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    color: #533738;
+}
+
+.nav-link:hover {
+    color: #C48284;
+    font-weight: 500;
+}
+
+.nav-link:active {
+    color: #F95A5F;
+    font-weight: 500;
 }
 
 .nav-item:not(:last-child) {
@@ -111,24 +122,8 @@ body {
     line-height: 20px;
 }
 
-.main-title {
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 125%;
-    margin-bottom: 24px;
-}
-
-.section-title {
-    width: 100%;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 125%;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-}
-
 .body-text {
-    /* margin: 0; */
+    margin: 0;
     font-size: 18px;
     line-height: 30px;
 }
@@ -154,41 +149,37 @@ cite.body-text {
     justify-content: center;
 }
 
+.href-order:hover {
+    background-color: #b07874
+}
+
+.href-order:active {
+    color: #cc8b86;
+    background-color: #946263;
+}
+
 /* MAIN – О НАС */
 
-.cover-main {
+.section-about {
     padding-top: 65px;
 }
 
-.section-about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.box-about {
+    padding: 65px 182px 21px 182px;
 }
 
-.section-about img {
-    margin-left: 182px;
-}
-
-.about-us {
-    width: 528px;
-    margin-right: 182px;
-}
-
-.our-progress {
-    width: 100%;
-    margin-top: 21px;
+.box-our-progress {
     background-color: #8d7370;
     padding: 85px 182px 81px 182px;
 }
 
-.our-progress ul {
+.box-our-progress ul {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.our-progress li {
+    list-style-type: none;
     color: #ffffff;
     font-size: 30px;
     font-weight: 400;
@@ -196,13 +187,147 @@ cite.body-text {
     text-transform: uppercase;
 }
 
-.our-progress li span {
+.box-our-progress li span {
     display: block;
     color: #ffffff;
     font-size: 50px;
     line-height: 135%;
 }
 
-.our-progress ul {
-    width: 100%;
+/* НАШИ РАБОТЫ */
+
+.section-promo {
+    padding: 65px 100px;
+}
+
+.promo-next-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: #533738;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 125%;
+    text-decoration: none;
+}
+
+/* .promo-next-link::after {
+    display: inline-block;
+    width: 50px;
+    height: 16px;
+    background: url("/images/decor/arrow-right.svg") no-repeat center;
+} */
+
+.next-arrow {
+    display: inline-block;
+    width: 62px;
+    height: 16px;
+    background: url("/images/decor/arrow-right.svg") no-repeat center;
+}
+
+
+/* КОМАНДА */
+
+.box-team-workflow {
+    background-color: #e2c4ba;
+}
+
+.section-team {
+    padding: 50px 182px 0 182px;
+}
+
+/* КАК МЫ РАБОТАЕМ */
+
+.section-workflow {
+    padding: 35px 100px 80px 100px;
+}
+
+
+/* ОТЗЫВЫ */
+
+.section-reviews {
+    padding: 65px 182px;
+}
+
+
+/* ОСТАВИТЬ ЗАЯВКУ */
+.section-order {
+    display: flex;
+    padding: 0 101px 0 182px;
+    background-color: #8d7370;
+}
+
+.box-order {
+    margin-top: 50px;
+}
+
+.box-order .title-section {
+    margin-bottom: 24px;
+}
+
+.box-order .body-text {
+    margin-bottom: 44px;
+}
+
+.box-order input {
+    display: block;
+    box-sizing: border-box;
+    width: 508px;
+    height: 35px;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+    background-color: #8d7370;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.box-order input:focus,
+.box-order input:active
+{
+    /* outline: #ffffff solid 1px; */
+    outline: 0;
+    outline-offset: 0;
+    color: #c9a39f;
+    border-bottom: 1px solid #c9a39f;
+}
+
+.box-order input:not(:last-of-type) {
+    margin-bottom: 35px;
+}
+
+.section-order .title-section,
+.section-order .body-text {
+    color: #ffffff;
+}
+
+button.href-order {
+    border: 0;
+}
+
+/* ФУТЕР */
+
+.body-footer {
+    margin-bottom: 500px;
+    border-bottom: 1px dashed #533738;
+}
+
+.box-address {
+    width: 1200px;
+    margin: 37px auto;
+    height: 30px;
+}
+
+.box-address span {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.box-address span:first-of-type {
+    margin-right: 42px;
+}
+
+.box-address span:last-of-type {
+    float: right;
 }
