@@ -1,20 +1,21 @@
 /* ОТЛАДОЧНЫЕ */
 
-/* header,
+header,
 main,
-footer {
+footer,
+nav {
     border: 1px solid red;
 }
 
-div {
+div,form {
     border: 1px solid rgb(102, 2, 57);
 }
 
-nav,
 ul,
 li,
-img {
-    border: 1px solid silver;
+img,
+ol {
+    border: 1px solid grey;
 }
 
 h1,
@@ -22,8 +23,7 @@ h2,
 p,
 span {
     border: 1px dashed rgb(59, 116, 182);
-}  */
-
+}
 
 /* ОСНОВНЫЕ ПРАВИЛА */
 
@@ -32,7 +32,7 @@ body {
     margin: 0;
     padding: 0;
     color: #533738;
-    background-color: #EFE6E4;
+    background-color: #efe6e4;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -104,12 +104,12 @@ body {
 }
 
 .nav-link:hover {
-    color: #C48284;
+    color: #c48284;
     font-weight: 500;
 }
 
 .nav-link:active {
-    color: #F95A5F;
+    color: #f95a5f;
     font-weight: 500;
 }
 
@@ -133,13 +133,11 @@ cite.body-text {
     text-transform: uppercase;
 }
 
-.href-order {
+.button-submit {
     position: relative;
     display: inline-flex;
     width: 309px;
     height: 74px;
-    margin-top: 21px;
-    left: -2px;
     font-size: 20px;
     line-height: 125%;
     font-weight: 500;
@@ -149,13 +147,18 @@ cite.body-text {
     justify-content: center;
 }
 
-.href-order:hover {
+.box-intro .button-submit {
+    margin-top: 21px;
+    left: -2px;
+}
+
+.button-submit:hover {
+    color: #ffffff;
     background-color: #b07874
 }
 
-.href-order:active {
-    color: #cc8b86;
-    background-color: #946263;
+.button-submit:active {
+    background-color: #f95a5f;
 }
 
 /* MAIN – О НАС */
@@ -200,7 +203,12 @@ cite.body-text {
     padding: 65px 100px;
 }
 
-.promo-next-link {
+.box-promo-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.promo-link {
     display: inline-block;
     margin-top: 40px;
     color: #533738;
@@ -210,6 +218,83 @@ cite.body-text {
     text-decoration: none;
 }
 
+.promo-image,
+.promo-text {
+    margin: 0;
+    padding: 0;
+}
+
+.promo-image img {
+    display: block;
+    /* Если не сделать фото блочным элементом, то снизу добавляется отступ в несколько "px". И соотв. hover-эффект перекрывает фото на эти пиксели  */
+}
+
+.promo-image {
+    position: relative;
+    width: max-content;
+    /* Офигенная штука! Устанавливает ширину родительского блока в соответствии с макс. шириной предка */
+}
+
+.promo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 18px;
+    line-height: 30px;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: .2s ease-in-out;
+    color: #ffffff;
+}
+
+.promo-text:hover {
+    opacity: 1;
+}
+
+.promo-text span {
+    padding: 0;
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Эти правила дублируют правила навигации в header nav. Надо бы как-то объединить !!! */
+
+.promo-link:visited {
+    color: #533738;
+}
+
+.promo-link:hover {
+    color: #c48284;
+    font-weight: 500;
+}
+
+.promo-link:active {
+    color: #f95a5f;
+    font-weight: 500;
+}
+
+/* КОСТЫЛИЩЕ! Научиться менять заливку SVG-е через fill */
+
+.promo-link:hover .promo-arrow-next,
+.promo-arrow-next:hover {
+    background: url("../images/decor/arrow-right-hover.svg") no-repeat center;
+}
+
+.promo-link:active .promo-arrow-next,
+.promo-arrow-next:active {
+    background: url("../images/decor/arrow-right-active.svg") no-repeat center;
+}
+
 /* .promo-next-link::after {
     display: inline-block;
     width: 50px;
@@ -217,13 +302,14 @@ cite.body-text {
     background: url("/images/decor/arrow-right.svg") no-repeat center;
 } */
 
-.next-arrow {
+.promo-arrow-next {
     display: inline-block;
     width: 62px;
     height: 16px;
-    background: url("../images/decor/arrow-right.svg") no-repeat center;
+    margin-left: 10px;
+    /* background: url("../images/decor/arrow-right.svg") no-repeat center; */
+    background: url('data:image/svg+xml;charset=utf8,%3C?xml version="1.0" encoding="utf-8"?%3E %3Csvg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 15" style="enable-background:new 0 0 60 15;" xml:space="preserve"%3E%3Cstyle type="text/css"%3E .st0{fill:%23533738;}%3C/style%3E%3Ctitle%3Earrow-right%3C/title%3E%3Cpath class="st0" d="M59.7,6.8l-6.3-6.5c-0.4-0.4-1-0.4-1.4,0c-0.4,0.4-0.4,1,0,1.4c0,0,0,0,0,0l4.6,4.8H0v2h56.7l-4.6,4.8 c-0.4,0.4-0.4,1,0,1.4c0,0,0,0,0,0c0.4,0.4,1,0.4,1.4,0l6.3-6.5C60.1,7.8,60.1,7.2,59.7,6.8z"/%3E%3C/svg%3E') no-repeat center;
 }
-
 
 /* КОМАНДА */
 
@@ -241,6 +327,29 @@ cite.body-text {
     padding: 35px 100px 80px 100px;
 }
 
+.workflow-list {
+    counter-reset: numeric;
+}
+
+.workflow-list-item {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #8d7370;
+    text-align: center;
+}
+
+.workflow-list-item:before {
+    position: relative;
+    top: 20px;
+    counter-increment: numeric;
+    content: counter(numeric);
+    font-size: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+}
 
 /* ОТЗЫВЫ */
 
@@ -248,16 +357,52 @@ cite.body-text {
     padding: 65px 182px;
 }
 
+.button-review {
+    padding: 0;
+    background-color: #cc8b86;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 0;
+}
+
+.button-review span {
+    display: inline-block;
+    width: 32px;
+    height: 15px;
+}
+
+.review-arrow-prev {
+    vertical-align: middle;
+    background: url("../images/decor/small-arrow.svg") no-repeat;
+    transform: scaleX(-1);
+}
+
+.review-arrow-next {
+    vertical-align: middle;
+    background: url("../images/decor/small-arrow.svg") no-repeat;
+}
+
+.button-review:hover {
+    background-color: #c48284;
+}
+
+.button-review:active {
+    background-color: #f95a5f;
+}
 
 /* ОСТАВИТЬ ЗАЯВКУ */
+
 .section-order {
     display: flex;
     padding: 0 101px 0 182px;
     background-color: #8d7370;
+    justify-content: space-between;
 }
 
 .box-order {
     margin-top: 50px;
+    margin-right: 20px;
 }
 
 .box-order .title-section {
@@ -283,14 +428,17 @@ cite.body-text {
     line-height: 30px;
 }
 
-.box-order input:focus,
-.box-order input:active
-{
-    /* outline: #ffffff solid 1px; */
+.box-order input::placeholder {
+    color: #ffffff;
+}
+
+.box-order input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.box-order input:focus {
     outline: 0;
     outline-offset: 0;
-    color: #c9a39f;
-    border-bottom: 1px solid #c9a39f;
 }
 
 .box-order input:not(:last-of-type) {
@@ -302,8 +450,9 @@ cite.body-text {
     color: #ffffff;
 }
 
-button.href-order {
+.box-order .button-submit {
     border: 0;
+    margin-top: 31px;
 }
 
 /* ФУТЕР */

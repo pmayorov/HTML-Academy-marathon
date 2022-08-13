@@ -1,3 +1,11 @@
-<svg width="61" height="16" viewBox="0 0 61 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M60.7071 8.70711C61.0976 8.31658 61.0976 7.68342 60.7071 7.29289L54.3432 0.928932C53.9526 0.538408 53.3195 0.538408 52.9289 0.928932C52.5384 1.31946 52.5384 1.95262 52.9289 2.34315L58.5858 8L52.9289 13.6569C52.5384 14.0474 52.5384 14.6805 52.9289 15.0711C53.3195 15.4616 53.9526 15.4616 54.3432 15.0711L60.7071 8.70711ZM0 9H60V7H0V9Z" fill="#533738"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 15" style="enable-background:new 0 0 60 15;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#533738;}
+</style>
+<title>arrow-right</title>
+<path class="st0" d="M59.7,6.8l-6.3-6.5c-0.4-0.4-1-0.4-1.4,0c-0.4,0.4-0.4,1,0,1.4c0,0,0,0,0,0l4.6,4.8H0v2h56.7l-4.6,4.8
+	c-0.4,0.4-0.4,1,0,1.4c0,0,0,0,0,0c0.4,0.4,1,0.4,1.4,0l6.3-6.5C60.1,7.8,60.1,7.2,59.7,6.8z"/>
 </svg>

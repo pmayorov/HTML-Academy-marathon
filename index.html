@@ -46,11 +46,12 @@
 
         <div class="box-intro">
             <h1 class="title-main">Поможем сделать вашу квартиру уютнее</h1>
-            <p class="body-text">Подбираем текстиль, мебель и аксессуары под ваш интерьер, находим магазины и помогаем
+            <p class="body-text">Подбираем текстиль, мебель и аксессуары<br>под ваш интерьер, находим магазины<br>и
+                помогаем
                 организовать
                 доставку
             </p>
-            <a class="href-order" href="#id-order">Оставить заявку</a>
+            <a class="button-submit" href="#id-order">Оставить заявку</a>
         </div>
 
     </header>
@@ -86,12 +87,44 @@
 
         <section class="section-promo">
             <h2 class="title-section" id="id-portfolio">Наши работы</h2>
-            <img src="images/content/apartment-01.jpg" width="488" height="451" alt="Интерьер спальни.">
-            <img src="images/content/apartment-02.jpg" width="692" height="451" alt="Интерьер столовой.">
-            <img src="images/content/apartment-03.jpg" width="692" height="451" alt="Интерьер зала.">
-            <img src="images/content/apartment-04.jpg" width="488" height="451" alt="Интерьер ванной комнаты.">
 
-            <a class="promo-next-link" href="#">Смотреть ещё <span class="next-arrow"></span></a>
+            <div class="box-promo-images">
+
+                <figure class="promo-image">
+                    <img src="images/content/apartment-01.jpg" width="488" height="451" alt="Интерьер спальни.">
+                    <figcaption class="promo-text"><span>Квартира-студия<br>30 кв.м.</span>В квартире были светлые стены
+                        и тёплые цвета. Мы сконцентрировались на отсылках к природе и
+                        сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</figcaption>
+                </figure>
+
+                <figure class="promo-image">
+                    <img src="images/content/apartment-02.jpg" width="692" height="451" alt="Интерьер столовой.">
+                    <figcaption class="promo-text"><span>Квартира-студия<br>30 кв.м.</span>В квартире были светлые стены
+                        и тёплые цвета. Мы сконцентрировались на отсылках к природе и
+                        сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</figcaption>
+                </figure>
+
+                <figure class="promo-image">
+                    <img src="images/content/apartment-03.jpg" width="692" height="451" alt="Интерьер зала.">
+                    <figcaption class="promo-text"><span>Квартира-студия<br>30 кв.м.</span>В квартире были светлые стены
+                        и тёплые цвета. Мы сконцентрировались на отсылках к природе и
+                        сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</figcaption>
+                </figure>
+
+                <figure class="promo-image">
+                    <img src="images/content/apartment-04.jpg" width="488" height="451" alt="Интерьер ванной комнаты.">
+                    <figcaption class="promo-text"><span>Квартира-студия<br>30 кв.м.</span>В квартире были светлые стены
+                        и тёплые цвета. Мы сконцентрировались на отсылках к природе и
+                        сделали ребятам уютный интерьер, отсылающий к виллам островов Бали.</figcaption>
+                </figure>
+
+                <!-- Не проработал в стилях точный нижний маргин от подзаголовка ховер-описания 
+                до самого параграфа – сделано на глазок! Надо как то иначе разметить ховер-текст описания, толи разделить
+            его на два блока, но тогда добавляются еще классы (!) для этих доп. текстовых блоков-->
+
+            </div>
+
+            <a class="promo-link" href="#">Смотреть ещё<span class="promo-arrow-next"></span></a>
         </section>
 
         <div class="box-team-workflow">
@@ -125,19 +158,21 @@
 
             <section class="section-workflow">
                 <h2 class="title-section text-center" id="id-workflow">Как мы работаем</h2>
-                <dl>
-                    <dt>1</dt>
+
+
+                <dl class="workflow-list">
+                    <dt class="workflow-list-item"></dt>
                     <dd class="body-text">Знакомимся, выезжаем на объект, утверждаем концепцию, подписываем договор.
                     </dd>
-                    <dt>2</dt>
+                    <dt class="workflow-list-item"></dt>
                     <dd class="body-text">Подбираем мебель, текстиль, аксессуары. Делаем 3D-визуализацию.</dd>
-                    <dt>3</dt>
+                    <dt class="workflow-list-item"></dt>
                     <dd class="body-text">Находим нужные магазины, помогаем с доставкой и оплатой товаров.</dd>
-                    <dt>4</dt>
+                    <dt class="workflow-list-item"></dt>
                     <dd class="body-text">Воплощаем проект в жизнь: расставляем мебель и цветы, вешаем шторы, находим
-                        места
-                        для мелочей.</dd>
+                        места для мелочей.</dd>
                 </dl>
+
             </section>
         </div>
 
@@ -145,7 +180,7 @@
 
         <section class="section-reviews">
             <h2 class="title-section text-center" id="id-reviews">Отзывы</h2>
-            <button class="btn-review-prev">arrow Left</button>
+            <button class="button-review"><span class="review-arrow-prev"></span></button>
             <div class="box-reviews-text">
                 <blockquote class="body-text">«Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу
                     студию для украшения
@@ -158,7 +193,7 @@
                 <img src="images/content/reviews-01.jpg" width="407" height="272" alt="Фото прихожей в отзывах.">
                 <img src="images/content/reviews-02.jpg" width="407" height="272" alt="Фото столовой в отзывах.">
             </div>
-            <button class="btn-review-next">arrow Left</button>
+            <button class="button-review"><span class="review-arrow-next"></span></button>
         </section>
 
         <!-- ОСТАВИТЬ ЗАЯВКУ -->
@@ -167,19 +202,19 @@
 
             <div class="box-order">
                 <h2 class="title-section">Оставить заявку</h2>
-                <p class="body-text">Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все
+                <p class="body-text">Оставьте свои контакты. Менеджер перезвонит<br>в удобное вам время и ответит на все
                     вопросы.</p>
                 <form id="id-order">
-                    <input type="text" name="name" value="Ваше имя">
-                    <input type="tel" name="tel" value="Введите телефон">
-                    <button class="href-order" type="submit">Оставить заявку</button>
+                    <input type="text" name="order-name" placeholder="Ваше имя">
+                    <input type="tel" name="order-tel" placeholder="Введите телефон">
+                    <button class="button-submit" type="submit">Оставить заявку</button>
                 </form>
             </div>
-           
-                <img src="images/content/map-screenhot.png" width="590" height="624" alt="Google Map screenshot">
-           
+
+            <img src="images/content/map-screenhot.png" width="590" height="624" alt="Google Map screenshot">
+
         </section>
-    
+
     </main>
 
     <!-- FOOTER -->
