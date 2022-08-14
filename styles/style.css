@@ -1,37 +1,10 @@
-/* ОТЛАДОЧНЫЕ */
-
-/* header,
-main,
-footer,
-nav {
-    border: 1px solid red;
-}
-
-div,form {
-    border: 1px solid rgb(102, 2, 57);
-}
-
-ul,
-li,
-img,
-ol {
-    border: 1px solid grey;
-}
-
-h1,
-h2,
-p,
-span {
-    border: 1px dashed rgb(59, 116, 182);
-} */
-
-/* ОСНОВНЫЕ ПРАВИЛА */
+/* FONTS */
 
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-Regular.woff2') format('woff2'),
-        url('Montserrat-Regular.woff') format('woff');
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -39,8 +12,8 @@ span {
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-Medium.woff2') format('woff2'),
-        url('Montserrat-Medium.woff') format('woff');
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -48,12 +21,14 @@ span {
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-Bold.woff2') format('woff2'),
-        url('Montserrat-Bold.woff') format('woff');
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+
+/* GLOBAL */
 
 body {
     width: 1400px;
@@ -66,9 +41,6 @@ body {
     font-weight: 400;
 }
 
-.text-center {
-    text-align: center;
-}
 
 /* HEADER */
 
@@ -120,6 +92,10 @@ body {
     line-height: 125%;
     text-transform: uppercase;
     margin-bottom: 40px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .body-header a {
@@ -196,7 +172,14 @@ cite.body-text {
 }
 
 .box-about {
-    padding: 65px 182px 21px 182px;
+    padding: 0 182px 21px 182px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box-about-text {
+    width: 528px;
 }
 
 .box-our-progress {
@@ -204,7 +187,7 @@ cite.body-text {
     padding: 85px 182px 81px 182px;
 }
 
-.box-our-progress ul {
+.our-progress-list {
     margin: 0;
     padding: 0;
     display: flex;
@@ -218,7 +201,7 @@ cite.body-text {
     text-transform: uppercase;
 }
 
-.box-our-progress li span {
+.progress-list-item span {
     display: block;
     color: #ffffff;
     font-size: 50px;
@@ -234,10 +217,17 @@ cite.body-text {
 .box-promo-images {
     display: flex;
     flex-wrap: wrap;
+    width: 1200px;
+    height: 932px;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 .promo-link {
-    display: inline-block;
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    /*  Чтобы отцентрировть в секции преобразовал ссылку в блочный элемент, задал ширину по содержимому и маргин авто. Без установленной ширины не будет центрироваться */
     margin-top: 40px;
     color: #533738;
     font-size: 30px;
@@ -245,6 +235,7 @@ cite.body-text {
     line-height: 125%;
     text-decoration: none;
 }
+
 
 .promo-image,
 .promo-text {
@@ -275,7 +266,7 @@ cite.body-text {
     right: 0;
     font-size: 18px;
     line-height: 30px;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(100, 72, 69, 0.8);
     opacity: 0;
     transition: .2s ease-in-out;
     color: #ffffff;
@@ -311,7 +302,7 @@ cite.body-text {
     font-weight: 500;
 }
 
-/* КОСТЫЛИЩЕ! Научиться менять заливку SVG-е через fill */
+/* КОСТЫЛИЩЕ! Проработать заливку SVG-шки через fill */
 
 .promo-link:hover .promo-arrow-next,
 .promo-arrow-next:hover {
@@ -322,6 +313,8 @@ cite.body-text {
 .promo-arrow-next:active {
     background: url("../images/decor/arrow-right-active.svg") no-repeat center;
 }
+
+/* КОСТЫЛИЩЕ! Проработать разметку стрелки через псевдоэлемент */
 
 /* .promo-next-link::after {
     display: inline-block;
@@ -349,6 +342,42 @@ cite.body-text {
     padding: 50px 182px 0 182px;
 }
 
+.team-list img {
+    display: block;
+    /* img преобразовываю в "block" чтобы убрать под ним 4px-ный margin  */
+}
+
+
+.team-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: "member-image-01 member-image-02 member-image-03"
+        "member-notice-01 member-notice-02 member-notice-03";
+    grid-template-columns: repeat(3, 320px);
+    justify-content: space-between;
+    row-gap: 10px;
+}
+
+.team-list dt:nth-of-type(1) {
+    grid-area: member-image-01;
+}
+.team-list dt:nth-of-type(2) {
+    grid-area: member-image-02;
+}
+.team-list dt:nth-of-type(3) {
+    grid-area: member-image-03;
+}
+.team-list dd:nth-of-type(1) {
+    grid-area: member-notice-01;
+}
+.team-list dd:nth-of-type(2) {
+    grid-area: member-notice-02;
+}
+.team-list dd:nth-of-type(3) {
+    grid-area: member-notice-03;
+}
+
 /* КАК МЫ РАБОТАЕМ */
 
 .section-workflow {
@@ -356,6 +385,15 @@ cite.body-text {
 }
 
 .workflow-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    grid-template-areas:     
+    "list-item-01 list-item-02 list-item-03 list-item-04"
+    "item-text-01 item-text-02 item-text-03 item-text-04";
+    justify-content: space-between;
+    row-gap: 20px;
     counter-reset: numeric;
 }
 
@@ -366,6 +404,7 @@ cite.body-text {
     border-radius: 50%;
     background-color: #8d7370;
     text-align: center;
+    justify-self: center;
 }
 
 .workflow-list-item:before {
@@ -377,6 +416,32 @@ cite.body-text {
     line-height: 30px;
     color: #ffffff;
     text-align: center;
+}
+
+.workflow-list dt:nth-of-type(1) {
+    grid-area: list-item-01;
+}
+.workflow-list dt:nth-of-type(2) {
+    grid-area: list-item-02;
+}
+.workflow-list dt:nth-of-type(3) {
+    grid-area: list-item-03;
+}
+.workflow-list dt:nth-of-type(4) {
+    grid-area: list-item-04;
+}
+
+.workflow-list dd:nth-of-type(1) {
+    grid-area: item-text-01;
+}
+.workflow-list dd:nth-of-type(2) {
+    grid-area: item-text-02;
+}
+.workflow-list dd:nth-of-type(3) {
+    grid-area: item-text-03;
+}
+.workflow-list dd:nth-of-type(4) {
+    grid-area: item-text-04;
 }
 
 /* ОТЗЫВЫ */
@@ -394,21 +459,17 @@ cite.body-text {
     border: 0;
 }
 
-.button-review span {
+.review-arrow-prev,
+.review-arrow-next {
     display: inline-block;
+    vertical-align: middle;
     width: 32px;
     height: 15px;
+    background: url("../images/decor/small-arrow.svg") no-repeat;
 }
 
 .review-arrow-prev {
-    vertical-align: middle;
-    background: url("../images/decor/small-arrow.svg") no-repeat;
     transform: scaleX(-1);
-}
-
-.review-arrow-next {
-    vertical-align: middle;
-    background: url("../images/decor/small-arrow.svg") no-repeat;
 }
 
 .button-review:hover {

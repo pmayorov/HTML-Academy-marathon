@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Дизайн-студия интерьеров &laquo;SCANDI&raquo;</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/some-markup.css"> -->
     <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
 </head>
 
@@ -59,10 +57,11 @@
     <!-- MAIN -->
 
     <main>
-        <section>
+        <section class="section-about">
+            <h2 class="title-section text-center" id="id-about">О нас</h2>
             <div class="box-about">
-                <h2 class="title-section text-center" id="id-about">О нас</h2>
-                <img src="images/content/about-us.jpg" width="445" height="465" alt="Фото сервировки стола.">
+                <img class="about-image" src="images/content/about-us.jpg" width="445" height="465"
+                    alt="Фото сервировки стола.">
                 <div class="box-about-text">
                     <p class="body-text">Премиальный европейский текстиль — одно из самых главных направлений работы
                         коллектива. Создавать
@@ -75,10 +74,10 @@
                 </div>
             </div>
             <div class="box-our-progress">
-                <ul class="text-center">
-                    <li><span>5</span> лет опыта</li>
-                    <li><span>100</span> проектов</li>
-                    <li><span>10</span> наград</li>
+                <ul class="our-progress-list text-center">
+                    <li class="progress-list-item"><span>5</span> лет опыта</li>
+                    <li class="progress-list-item"><span>100</span> проектов</li>
+                    <li class="progress-list-item"><span>10</span> наград</li>
                 </ul>
             </div>
         </section>
@@ -87,9 +86,7 @@
 
         <section class="section-promo">
             <h2 class="title-section" id="id-portfolio">Наши работы</h2>
-
             <div class="box-promo-images">
-
                 <figure class="promo-image">
                     <img src="images/content/apartment-01.jpg" width="488" height="451" alt="Интерьер спальни.">
                     <figcaption class="promo-text"><span>Квартира-студия<br>30 кв.м.</span>В квартире были светлые стены
@@ -123,7 +120,6 @@
             его на два блока, но тогда добавляются еще классы (!) для этих доп. текстовых блоков-->
 
             </div>
-
             <a class="promo-link" href="#">Смотреть ещё<span class="promo-arrow-next"></span></a>
         </section>
 
@@ -133,24 +129,20 @@
 
             <section class="section-team">
                 <h2 class="title-section text-center" id="id-team">Команда</h2>
-                <dl>
+                <dl class="team-list">
                     <dt><img src="images/content/member-01.jpg" width="320" height="253" alt="Фото главного дизайнера.">
                     </dt>
-                    <dd class="body-text">Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам
-                        домой, общается и
-                        помогает сделать вашу квартиру красивой и уютной.</dd>
+                    <dd class="body-text">Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к
+                        вам домой, общается и помогает сделать вашу квартиру красивой и уютной.
+                    </dd>
 
                     <dt><img src="images/content/member-02.jpg" width="320" height="253" alt="Фото менеджера."></dt>
                     <dd class="body-text">С нашим менеджером Сашей вы познакомитесь в первую очередь. Она
-                        проконсультирует
-                        вас, соберёт все
-                        документы и ответит на все вопросы.</dd>
+                        проконсультирует вас, соберёт все документы и ответит на все вопросы.</dd>
 
                     <dt><img src="images/content/member-03.jpg" width="320" height="253" alt="Фото дизайнера."></dt>
                     <dd class="body-text">Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами и
-                        точно
-                        знает, как
-                        обустроить дом так, чтобы вам понравилось.</dd>
+                        точно знает, как обустроить дом так, чтобы вам понравилось.</dd>
                 </dl>
             </section>
 
@@ -158,8 +150,6 @@
 
             <section class="section-workflow">
                 <h2 class="title-section text-center" id="id-workflow">Как мы работаем</h2>
-
-
                 <dl class="workflow-list">
                     <dt class="workflow-list-item"></dt>
                     <dd class="body-text">Знакомимся, выезжаем на объект, утверждаем концепцию, подписываем договор.
@@ -172,8 +162,8 @@
                     <dd class="body-text">Воплощаем проект в жизнь: расставляем мебель и цветы, вешаем шторы, находим
                         места для мелочей.</dd>
                 </dl>
-
             </section>
+
         </div>
 
         <!-- ОТЗЫВЫ -->
@@ -204,9 +194,9 @@
                 <h2 class="title-section">Оставить заявку</h2>
                 <p class="body-text">Оставьте свои контакты. Менеджер перезвонит<br>в удобное вам время и ответит на все
                     вопросы.</p>
-                <form id="id-order">
-                    <input type="text" name="order-name" placeholder="Ваше имя">
-                    <input type="tel" name="order-tel" placeholder="Введите телефон">
+                <form name="order" id="id-order">
+                    <input type="text" name="field-user" placeholder="Ваше имя">
+                    <input type="tel" name="field-tel" placeholder="Введите телефон">
                     <button class="button-submit" type="submit">Оставить заявку</button>
                 </form>
             </div>
