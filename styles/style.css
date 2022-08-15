@@ -96,7 +96,7 @@ body {
     text-align: center;
 }
 
-.body-header a {
+.nav-link {
     text-decoration: none;
 }
 
@@ -152,6 +152,7 @@ cite.body-text {
     color: #533738;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .box-intro .button-submit {
@@ -586,6 +587,7 @@ cite.body-text {
 .body-footer {
     margin-bottom: 500px;
     border-bottom: 1px dashed #533738;
+    
 }
 
 .box-address {
@@ -605,4 +607,8 @@ cite.body-text {
 
 .box-address span:last-of-type {
     float: right;
+}
+
+.body-footer .nav-link {
+    font-size: inherit;
 }
