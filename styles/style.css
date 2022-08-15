@@ -64,8 +64,6 @@ body {
 
 .nav-list {
     display: flex;
-    margin: 0;
-    padding: 0;
     list-style-type: none;
 }
 
@@ -100,6 +98,11 @@ body {
 
 .body-header a {
     text-decoration: none;
+}
+
+.clean-indents {
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link:link,
@@ -188,8 +191,6 @@ cite.body-text {
 }
 
 .our-progress-list {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -234,13 +235,6 @@ cite.body-text {
     font-weight: 500;
     line-height: 125%;
     text-decoration: none;
-}
-
-
-.promo-image,
-.promo-text {
-    margin: 0;
-    padding: 0;
 }
 
 .promo-image img {
@@ -349,8 +343,6 @@ cite.body-text {
 
 
 .team-list {
-    margin: 0;
-    padding: 0;
     display: grid;
     grid-template-areas: "member-image-01 member-image-02 member-image-03"
         "member-notice-01 member-notice-02 member-notice-03";
@@ -362,18 +354,23 @@ cite.body-text {
 .team-list dt:nth-of-type(1) {
     grid-area: member-image-01;
 }
+
 .team-list dt:nth-of-type(2) {
     grid-area: member-image-02;
 }
+
 .team-list dt:nth-of-type(3) {
     grid-area: member-image-03;
 }
+
 .team-list dd:nth-of-type(1) {
     grid-area: member-notice-01;
 }
+
 .team-list dd:nth-of-type(2) {
     grid-area: member-notice-02;
 }
+
 .team-list dd:nth-of-type(3) {
     grid-area: member-notice-03;
 }
@@ -385,13 +382,11 @@ cite.body-text {
 }
 
 .workflow-list {
-    margin: 0;
-    padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 285px);
-    grid-template-areas:     
-    "list-item-01 list-item-02 list-item-03 list-item-04"
-    "item-text-01 item-text-02 item-text-03 item-text-04";
+    grid-template-areas:
+        "list-item-01 list-item-02 list-item-03 list-item-04"
+        "item-text-01 item-text-02 item-text-03 item-text-04";
     justify-content: space-between;
     row-gap: 20px;
     counter-reset: numeric;
@@ -421,12 +416,15 @@ cite.body-text {
 .workflow-list dt:nth-of-type(1) {
     grid-area: list-item-01;
 }
+
 .workflow-list dt:nth-of-type(2) {
     grid-area: list-item-02;
 }
+
 .workflow-list dt:nth-of-type(3) {
     grid-area: list-item-03;
 }
+
 .workflow-list dt:nth-of-type(4) {
     grid-area: list-item-04;
 }
@@ -434,12 +432,15 @@ cite.body-text {
 .workflow-list dd:nth-of-type(1) {
     grid-area: item-text-01;
 }
+
 .workflow-list dd:nth-of-type(2) {
     grid-area: item-text-02;
 }
+
 .workflow-list dd:nth-of-type(3) {
     grid-area: item-text-03;
 }
+
 .workflow-list dd:nth-of-type(4) {
     grid-area: item-text-04;
 }
@@ -450,7 +451,43 @@ cite.body-text {
     padding: 65px 182px;
 }
 
+.box-reviews {
+    display: flex;
+    align-items: center;
+}
+
+.box-reviews-images img {
+    display: block;
+}
+
+.box-reviews-images img:first-of-type {
+    margin-bottom: 24px;
+}
+
+.button-review:first-of-type {
+    margin-right: 29px;
+}
+
+.button-review:last-of-type {
+    margin-left: 29px;
+}
+
+.box-reviews-text {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.box-reviews-text .body-text {
+    margin-bottom: 18px;
+}
+
+.box-reviews-images {
+    flex-grow: 1;
+}
+
 .button-review {
+    flex: 0 0 auto;
+    /* flex: grow (растягивание) - shrink (сужение) - basis (базовый размер)*/
     padding: 0;
     background-color: #cc8b86;
     width: 72px;
