@@ -162,7 +162,8 @@ cite.body-text {
 
 .button-submit:hover {
     color: #ffffff;
-    background-color: #b07874
+    background-color: #b07874;
+    cursor: pointer;
 }
 
 .button-submit:active {
@@ -512,6 +513,7 @@ cite.body-text {
 
 .button-review:hover {
     background-color: #c48284;
+    cursor: pointer;
 }
 
 .button-review:active {
